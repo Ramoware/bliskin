@@ -158,19 +158,32 @@
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-rose-200 to-pink-200 rounded-full blur-3xl opacity-30"></div>
                         <svg class="relative w-full h-96" viewBox="0 0 400 400" fill="none">
-                            <!-- Elegant bottle silhouette -->
                             <defs>
-                                <linearGradient id="bottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <linearGradient id="heroBottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" style="stop-color:#F8E8E8"/>
                                     <stop offset="50%" style="stop-color:#E8B4B8"/>
                                     <stop offset="100%" style="stop-color:#D4A5A9"/>
                                 </linearGradient>
+                                <linearGradient id="heroLiquidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFE4E1"/>
+                                    <stop offset="100%" style="stop-color:#FFC0CB"/>
+                                </linearGradient>
                             </defs>
+                            <!-- Shadow -->
                             <ellipse cx="200" cy="350" rx="60" ry="15" fill="rgba(212, 165, 169, 0.2)"/>
-                            <rect x="160" y="80" width="80" height="270" rx="40" fill="url(#bottleGradient)" opacity="0.9"/>
-                            <rect x="180" y="50" width="40" height="40" rx="5" fill="url(#bottleGradient)"/>
-                            <circle cx="200" cy="120" r="25" fill="rgba(255,255,255,0.3)"/>
-                            <rect x="190" y="140" width="20" height="180" fill="rgba(255,255,255,0.2)"/>
+                            <!-- Main bottle -->
+                            <rect x="160" y="80" width="80" height="270" rx="40" fill="url(#heroBottleGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                            <!-- Cap -->
+                            <rect x="180" y="50" width="40" height="40" rx="20" fill="url(#heroBottleGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                            <!-- Liquid inside -->
+                            <rect x="170" y="100" width="60" height="230" rx="30" fill="url(#heroLiquidGradient)" opacity="0.8"/>
+                            <!-- Highlight -->
+                            <rect x="190" y="90" width="20" height="250" rx="10" fill="rgba(255,255,255,0.4)"/>
+                            <!-- Label -->
+                            <rect x="175" y="180" width="50" height="80" rx="5" fill="rgba(255,255,255,0.9)"/>
+                            <text x="200" y="210" text-anchor="middle" font-size="16" fill="#D4A5A9" font-family="serif" font-weight="bold">BLISKIN</text>
+                            <text x="200" y="230" text-anchor="middle" font-size="10" fill="#D4A5A9" font-family="serif">LUXURY</text>
+                            <text x="200" y="245" text-anchor="middle" font-size="10" fill="#D4A5A9" font-family="serif">SERUM</text>
                         </svg>
                     </div>
                 </div>
@@ -189,11 +202,36 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Radiance Serum -->
                 <div class="product-card rounded-3xl p-8 hover-lift fade-in">
                     <div class="h-48 bg-gradient-to-br from-rose-100 to-pink-100 rounded-2xl mb-6 flex items-center justify-center">
-                        <svg class="w-24 h-24" viewBox="0 0 100 100" fill="none">
-                            <rect x="30" y="20" width="40" height="60" rx="20" fill="url(#bottleGradient)"/>
-                            <rect x="40" y="10" width="20" height="15" rx="3" fill="url(#bottleGradient)"/>
+                        <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none">
+                            <defs>
+                                <linearGradient id="serumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F8E8E8"/>
+                                    <stop offset="50%" style="stop-color:#E8B4B8"/>
+                                    <stop offset="100%" style="stop-color:#D4A5A9"/>
+                                </linearGradient>
+                                <linearGradient id="liquidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="100%" style="stop-color:#FFA500"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Bottle shadow -->
+                            <ellipse cx="62" cy="105" rx="25" ry="8" fill="rgba(212, 165, 169, 0.3)"/>
+                            <!-- Main bottle -->
+                            <rect x="40" y="30" width="40" height="75" rx="20" fill="url(#serumGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Dropper cap -->
+                            <rect x="50" y="15" width="20" height="20" rx="10" fill="url(#serumGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Dropper tube -->
+                            <rect x="58" y="25" width="4" height="15" fill="rgba(255,255,255,0.8)"/>
+                            <!-- Liquid inside -->
+                            <rect x="45" y="40" width="30" height="55" rx="15" fill="url(#liquidGradient)" opacity="0.8"/>
+                            <!-- Highlight -->
+                            <rect x="50" y="35" width="8" height="60" rx="4" fill="rgba(255,255,255,0.4)"/>
+                            <!-- Label -->
+                            <rect x="45" y="60" width="30" height="20" rx="2" fill="rgba(255,255,255,0.9)"/>
+                            <text x="60" y="72" text-anchor="middle" font-size="6" fill="#D4A5A9" font-family="serif">BLISKIN</text>
                         </svg>
                     </div>
                     <h3 class="playfair text-2xl font-semibold text-gray-800 mb-2">Radiance Serum</h3>
@@ -206,11 +244,36 @@
                     </div>
                 </div>
 
+                <!-- Moisture Cream -->
                 <div class="product-card rounded-3xl p-8 hover-lift fade-in">
                     <div class="h-48 bg-gradient-to-br from-cream-100 to-rose-100 rounded-2xl mb-6 flex items-center justify-center">
-                        <svg class="w-24 h-24" viewBox="0 0 100 100" fill="none">
-                            <circle cx="50" cy="50" r="30" fill="url(#bottleGradient)"/>
-                            <circle cx="50" cy="40" r="15" fill="rgba(255,255,255,0.3)"/>
+                        <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none">
+                            <defs>
+                                <linearGradient id="creamGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F8E8E8"/>
+                                    <stop offset="50%" style="stop-color:#E8B4B8"/>
+                                    <stop offset="100%" style="stop-color:#D4A5A9"/>
+                                </linearGradient>
+                                <linearGradient id="creamLiquidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFF8DC"/>
+                                    <stop offset="100%" style="stop-color:#F5DEB3"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Jar shadow -->
+                            <ellipse cx="60" cy="105" rx="35" ry="10" fill="rgba(212, 165, 169, 0.3)"/>
+                            <!-- Main jar -->
+                            <ellipse cx="60" cy="70" rx="35" ry="35" fill="url(#creamGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Lid -->
+                            <ellipse cx="60" cy="35" rx="30" ry="15" fill="url(#creamGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Lid top -->
+                            <ellipse cx="60" cy="30" rx="25" ry="12" fill="rgba(255,255,255,0.3)"/>
+                            <!-- Cream inside -->
+                            <ellipse cx="60" cy="75" rx="25" ry="25" fill="url(#creamLiquidGradient)" opacity="0.8"/>
+                            <!-- Highlight -->
+                            <ellipse cx="50" cy="60" rx="8" ry="20" fill="rgba(255,255,255,0.4)"/>
+                            <!-- Label -->
+                            <rect x="40" y="65" width="40" height="15" rx="7" fill="rgba(255,255,255,0.9)"/>
+                            <text x="60" y="75" text-anchor="middle" font-size="6" fill="#D4A5A9" font-family="serif">BLISKIN</text>
                         </svg>
                     </div>
                     <h3 class="playfair text-2xl font-semibold text-gray-800 mb-2">Moisture Cream</h3>
@@ -223,11 +286,35 @@
                     </div>
                 </div>
 
+                <!-- Gentle Cleanser -->
                 <div class="product-card rounded-3xl p-8 hover-lift fade-in">
                     <div class="h-48 bg-gradient-to-br from-pink-100 to-rose-100 rounded-2xl mb-6 flex items-center justify-center">
-                        <svg class="w-24 h-24" viewBox="0 0 100 100" fill="none">
-                            <rect x="25" y="30" width="50" height="40" rx="25" fill="url(#bottleGradient)"/>
-                            <rect x="35" y="20" width="30" height="15" rx="7" fill="url(#bottleGradient)"/>
+                        <svg class="w-32 h-32" viewBox="0 0 120 120" fill="none">
+                            <defs>
+                                <linearGradient id="cleanserGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F8E8E8"/>
+                                    <stop offset="50%" style="stop-color:#E8B4B8"/>
+                                    <stop offset="100%" style="stop-color:#D4A5A9"/>
+                                </linearGradient>
+                                <linearGradient id="cleanserLiquidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#E6E6FA"/>
+                                    <stop offset="100%" style="stop-color:#DDA0DD"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Tube shadow -->
+                            <ellipse cx="60" cy="105" rx="20" ry="8" fill="rgba(212, 165, 169, 0.3)"/>
+                            <!-- Main tube -->
+                            <rect x="35" y="25" width="50" height="80" rx="25" fill="url(#cleanserGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Cap -->
+                            <rect x="45" y="10" width="30" height="25" rx="15" fill="url(#cleanserGradient)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+                            <!-- Liquid inside -->
+                            <rect x="40" y="35" width="40" height="60" rx="20" fill="url(#cleanserLiquidGradient)" opacity="0.8"/>
+                            <!-- Highlight -->
+                            <rect x="50" y="30" width="10" height="70" rx="5" fill="rgba(255,255,255,0.4)"/>
+                            <!-- Label -->
+                            <rect x="40" y="55" width="40" height="25" rx="3" fill="rgba(255,255,255,0.9)"/>
+                            <text x="60" y="68" text-anchor="middle" font-size="6" fill="#D4A5A9" font-family="serif">BLISKIN</text>
+                            <text x="60" y="76" text-anchor="middle" font-size="4" fill="#D4A5A9" font-family="serif">CLEANSER</text>
                         </svg>
                     </div>
                     <h3 class="playfair text-2xl font-semibold text-gray-800 mb-2">Gentle Cleanser</h3>
@@ -274,7 +361,7 @@
                                 <div class="text-center">
                                     <div class="text-3xl font-bold text-rose-400 mb-2">50K+</div>
                                     <div class="text-gray-600">Happy Customers</div>
-                                </div>
+                                    </div>
                                 <div class="text-center">
                                     <div class="text-3xl font-bold text-rose-400 mb-2">15+</div>
                                     <div class="text-gray-600">Awards</div>
@@ -357,7 +444,7 @@
                         <li><a href="#" class="hover:text-rose-400 transition-colors duration-300">Careers</a></li>
                         <li><a href="#" class="hover:text-rose-400 transition-colors duration-300">Press</a></li>
                         <li><a href="#" class="hover:text-rose-400 transition-colors duration-300">Sustainability</a></li>
-                    </ul>
+                        </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
@@ -369,7 +456,7 @@
     <script>
         // Smooth scroll animations
         const observerOptions = {
-threshold: 0.1,
+            threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
@@ -387,22 +474,53 @@ threshold: 0.1,
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); }); // Add to cart functionality document.querySelectorAll('button:contains("Add to Cart")').forEach(button => { button.addEventListener('click', function() { this.innerHTML = 'Added! ✓';
-this.classList.add('bg-green-400'); this.classList.remove('bg-rose-300', 'hover:bg-rose-400'); setTimeout(() => { this.innerHTML = 'Add to Cart'; this.classList.remove('bg-green-400'); this.classList.add('bg-rose-300', 'hover:bg-rose-400'); }, 2000); }); }); // Newsletter subscription
-document.querySelector('button:contains("Subscribe")').addEventListener('click', function() {
-            const email = document.querySelector('input[type="email"]').value;
-            if (email) {
-                this.innerHTML = 'Subscribed! ✓';
-                this.classList.add('bg-green-400');
-                document.querySelector('input[type="email"]').value = '';
-                
-                setTimeout(() => {
-                    this.innerHTML = 'Subscribe';
-                    this.classList.remove('bg-green-400');
-                }, 3000);
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Add to Cart')) {
+                button.addEventListener('click', function() {
+                    this.innerHTML = 'Added! ✓';
+                    this.classList.add('bg-green-400');
+                    this.classList.remove('bg-rose-300', 'hover:bg-rose-400');
+                    setTimeout(() => {
+                        this.innerHTML = 'Add to Cart';
+                        this.classList.remove('bg-green-400');
+                        this.classList.add('bg-rose-300', 'hover:bg-rose-400');
+                    }, 2000);
+                });
+            }
+        });
+
+        // Newsletter subscription
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Subscribe')) {
+                button.addEventListener('click', function() {
+                    const email = document.querySelector('input[type="email"]').value;
+                    if (email) {
+                        this.innerHTML = 'Subscribed! ✓';
+                        this.classList.add('bg-green-400');
+                        document.querySelector('input[type="email"]').value = '';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = 'Subscribe';
+                            this.classList.remove('bg-green-400');
+                        }, 3000);
+                    }
+                });
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'977905e933898577',t:'MTc1NjYwNjU1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function()
-{};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>      
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9779469787c6b79c',t:'MTc1NjYwOTIwNy4wMDAwMDA='};var
+    a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+    
